@@ -1,0 +1,31 @@
+{
+  "name": "parent-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:dev-backend\" \"npm:dev-frontend\"",
+    "dev-backend": "ts-node server/index.ts",
+    "dev-frontend": "cd client && npm start",
+    "build-frontend": "cd client && npm run build"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express-session": "^1.18.2",
+    "passport": "^0.6.0",
+    "passport-saml": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.24",
+    "@types/express-session": "^1.18.2",
+    "@types/node": "^20.19.23",
+    "@types/passport": "^1.0.17",
+    "concurrently": "^8.2.0",
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
